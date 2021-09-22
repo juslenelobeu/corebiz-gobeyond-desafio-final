@@ -1,5 +1,13 @@
-  @import '../../styles/colors';
-  
-  .main__content {
+@import '../../styles/colors';
+
+.main__content {
   border: thin solid green;
+
+  .content__image {
+    max-width: 1127px;
+
+    img {
+      width: 100%;
+    }
+  }
 }
