@@ -2,7 +2,7 @@ import axios from 'axios'
 import React, { useState, useEffect } from 'react'
 import './styles.scss'
 
-interface ContentItemProps {
+interface ContentProps {
   id: number
   title: string
   url: string
@@ -10,32 +10,35 @@ interface ContentItemProps {
 }
 
 export const Main = () => {
-  const [contentItem, setContentItem] = useState([])
+  const [content, setContent] = useState([{
+    id: 0,
+    title: '',
+    url: '',
+    thumbnailUrl: ''
+  }])
+  const [index, setIndex] = useState(0)
 
   useEffect(() => {
-    axios.get('https://jsonplaceholder.typicode.com/photos?_start=0&_limit=5')
-      .then((result) => { setContentItem(result.data) })
+    axios.get('https://jsonplaceholder.typicode.com/photos?_start=0&_limit=4')
+      .then((result) => { setContent(result.data) })
   }, [])
 
   return (
     <main className="main__content">
-      {contentItem.map((item: ContentItemProps) => (
-        <>
-          <div key={item.id} className="content__description">
-            <h1>{item.title}</h1>
-            <a href={item.url} title={item.title} target="_blank" rel="noopener noreferrer" className="description__button button--cta">Ver mais</a>
-            <div className="description__thumbs">
-              <img src="https://via.placeholder.com/150/d32776" alt="" />
-              <img src="https://via.placeholder.com/150/24f355" alt="" />
-              <img src="https://via.placeholder.com/150/d32776" alt="" />
-              <img src="https://via.placeholder.com/150/24f355" alt="" />
-            </div>
-          </div>
-          <div className="content__image">
-            <img src={item.thumbnailUrl} alt={item.title} />
-          </div>
-        </>
-      ))}
+      <div className="content__description">
+        <h1>{content[index].title}</h1>
+        <a href={content[index].url} title={content[index].title} target="_blank" rel="noopener noreferrer" className="description__button">Ver mais</a>
+        <div className="description__thumbs">
+          {content.map((item: ContentProps, index: number) => (
+            <button className="thumbs__button" onClick={() => setIndex(index)} key={index}>
+              <img className="image__small" src={item.thumbnailUrl} alt={item.title} />
+            </button>
+          ))}
+        </div>
+      </div>
+      <div className="content__image">
+        <img className="image__large" src={content[index].url} alt="" />
+      </div>
     </main>
   )
 }
