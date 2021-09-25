@@ -24,11 +24,14 @@ export const Main = () => {
     return splitUrl.join('/')
   }
 
-  useEffect(() => {
-    axios.get('https://jsonplaceholder.typicode.com/photos?_start=0&_limit=4')
+  const getUrl = async () => {
+    await axios.get('https://jsonplaceholder.typicode.com/photos?_start=0&_limit=4')
       .then((result) => {
         setContent(result.data)
       })
+  }
+  useEffect(() => {
+    getUrl()
   }, [])
 
   return (
