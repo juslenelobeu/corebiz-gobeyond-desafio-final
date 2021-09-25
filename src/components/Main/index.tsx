@@ -18,6 +18,7 @@ export const Main = () => {
     thumbnailUrl: ''
   }])
   const [index, setIndex] = useState(0)
+  const [thumbnail, setThumbnail] = useState(0)
 
   const replaceUrl = (url: string, size: string) => {
     let splitUrl = url.split('/')
@@ -40,9 +41,9 @@ export const Main = () => {
       <div className="content__description">
         <h1 className="content__title">{content[index].title}</h1>
         <a className="content__link" href="https://www.corebiz.ag/" title="Link para o site da Corebiz" target="_blank" rel="noopener noreferrer">Ver mais <img src={iconArrow} alt="" /></a>
-        <div className="description__thumbs">
+        <div className="description__thumbnails">
           {content.map((item: ContentProps, index: number) => (
-            <button className="thumb__button active" onClick={() => setIndex(index)} key={index}>
+            <button className={`thumbnail__button ${index === thumbnail ? 'active' : ''}`} onClick={() => { setIndex(index); setThumbnail(index) }} key={index}>
               <img className="image__small" src={replaceUrl(item.thumbnailUrl, '240x144')} width={240} alt={item.title} />
             </button>
           ))}

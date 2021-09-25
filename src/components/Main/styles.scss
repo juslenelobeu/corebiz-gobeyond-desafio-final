@@ -13,6 +13,7 @@
     
       .content__title {
         font-size: 3.75rem;
+        height: 360px;
       }
 
       .content__link {
@@ -29,11 +30,11 @@
         text-align: center;
       }
 
-      .description__thumbs {
+      .description__thumbnails {
         display: flex;
         gap: .8rem;
 
-        .thumb__button {
+        .thumbnail__button {
           max-width: 150px;
           border: none;
           border-radius:.2rem;
