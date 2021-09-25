@@ -18,26 +18,34 @@ export const Main = () => {
   }])
   const [index, setIndex] = useState(0)
 
+  const replaceUrl = (url: string, size: string) => {
+    let splitUrl = url.split('/')
+    splitUrl[3] = size
+    return splitUrl.join('/')
+  }
+
   useEffect(() => {
     axios.get('https://jsonplaceholder.typicode.com/photos?_start=0&_limit=4')
-      .then((result) => { setContent(result.data) })
+      .then((result) => {
+        setContent(result.data)
+      })
   }, [])
 
   return (
     <main className="main__content">
       <div className="content__description">
-        <h1>{content[index].title}</h1>
-        <a href={content[index].url} title={content[index].title} target="_blank" rel="noopener noreferrer" className="description__button">Ver mais</a>
+        <h1 className="content__title">{content[index].title}</h1>
+        <a className="content__link" href={content[index].url} title={content[index].title} target="_blank" rel="noopener noreferrer">Ver mais</a>
         <div className="description__thumbs">
           {content.map((item: ContentProps, index: number) => (
-            <button className="thumbs__button" onClick={() => setIndex(index)} key={index}>
-              <img className="image__small" src={item.thumbnailUrl} alt={item.title} />
+            <button className="thumb__button" onClick={() => setIndex(index)} key={index}>
+              <img className="image__small" src={replaceUrl(item.thumbnailUrl, '120x72')} alt={item.title} />
             </button>
           ))}
         </div>
       </div>
       <div className="content__image">
-        <img className="image__large" src={content[index].url} alt="" />
+        <img className="image__large" src={replaceUrl(content[index].url, '1130x670')} alt="" />
       </div>
     </main>
   )

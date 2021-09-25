@@ -2,11 +2,30 @@
 
 .main__content {
   border: thin solid green;
+  display: flex;
+  justify-content: space-between;
+
+  .content__description {
+    width: 27%;
+    
+      .content__title {
+        font-size: 60px;
+      }
+
+      .content__link {}
+
+      .description__thumbs {
+        .thumb__button {
+          .image__small {}
+        }
+      }
+  }
 
   .content__image {
+    width: 73%;
     max-width: 1127px;
 
-    img {
+    .image__large {
       width: 100%;
     }
   }
