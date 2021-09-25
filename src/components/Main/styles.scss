@@ -8,51 +8,97 @@
   .content__description {
     width: 30%;
     
-      .content__title {
-        font-size: 3.75rem;
-        height: 360px;
+    .content__title {
+      width: 90%;
+      height: 360px;
+      font-weight: bold;
+      font-size: 3.75rem;
+      line-height: 3.75rem;
+    }
+
+    .content__link {
+      width: 221px;
+      gap: .5rem;
+      background-color: $color-white;
+      padding: 1rem;
+      margin: 2rem 0;
+      border-radius: 3.125rem;
+      color: $color-black;
+      font-size: 1.2rem;
+      text-align: center;
+      transition: gap .5s ease;
+
+      &:hover {
+        gap: 1rem
       }
+    }
 
-      .content__link {
-        width: 221px;
-        gap: .5rem;
-        background-color: $color-white;
-        padding: 1rem;
-        margin: 2rem 0;
-        border-radius: 3.125rem;
-        color: $color-black;
-        font-size: 1.2rem;
-        text-align: center;
-      }
+    .description__thumbnails {
+      gap: .8rem;
+      width: 90%;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      
+      .image__small {
+        width: 100%;
+        border-radius: .2rem;
+        transition: all .5s ease;
 
-      .description__thumbnails {
-        gap: .8rem;
-
-        .thumbnail__button {
-          max-width: 150px;
-          border: none;
-          border-radius:.2rem;
-          
-          &.active {
-            border: .2rem solid $color-white;
-          }
-          
-          .image__small {
-            width: 100%;
-            height: 100%;
-            border-radius:.2rem;
-          }
+        &:hover {
+          transform: translateY(.5rem);
+        }
+        
+        &.active {
+          border: .2rem solid $color-white;
         }
       }
+    }
   }
-
+  
   .content__image {
     width: 73%;
     max-width: 1127px;
-
+    
     .image__large {
       width: 100%;
       border-radius: 1rem;
+    }
+  }
+  
+  @media (max-width: 1280px) {
+    .content__description {
+      width: 40%;
+
+      .content__title {
+        font-size: 2.3rem;
+        line-height: 2.3rem;
+        height: 180px;
+      }
+
+      .content__link {
+        width: 40%;
+        padding: .8rem;
+        font-size: 1.1rem;
+      }
+    }
+    .content__image {
+      width: 60%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .content__description {
+      .content__title {
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+        height: 110px;
+        border: thin solid red;
+      }
+      .content__link {
+        padding: .5rem;
+        font-size: 1rem;
+        width: 60%;
+      }
     }
   }
 }

@@ -8,14 +8,14 @@ import iconLinkedin from '../../assets/icons/icon-linkedin.svg'
 
 export const Footer = () => {
   return (
-    <footer className="footer flex">
-      <div className="footer__left flex justify-between">
-        <div className="footer--col flex col flex justify-between">
+    <footer className="footer">
+      <div className="footer__left flex">
+        <div className="footer--col flex col flex">
           <div className="footer__logo flex col">
             <img src={logoCorebizFooter} alt="Logo Corebiz" width="140" />
             <span className="footer__copyright">direitos reservados, corebiz 2021</span>
           </div>
-          <nav className="footer__nav-social flex">
+          <nav className="footer__nav-social flex align-center">
             <a className="nav__item" href="https://pt-br.facebook.com/corebiz.ag/" target="_blank" rel="noreferrer"><img src={iconFacebook} alt="Ícone do Facebook" /></a>
             <a className="nav__item" href="https://www.instagram.com/corebizag/" target="_blank" rel="noreferrer"><img src={iconInstagram} alt="Ícone do Instagram" /></a>
             <a className="nav__item" href="https://www.linkedin.com/company/corebiz-brasil" target="_blank" rel="noreferrer"><img src={iconLinkedin} alt="Ícone do Linkedin" /></a>
@@ -30,23 +30,23 @@ export const Footer = () => {
           </nav>
         </div>
       </div>
-      <div className="footer__right flex justify-between">
+      <div className="footer__right flex">
         <div className="footer--col flex col">
           <h5 className="footer__title">.Brasil</h5>
-          <address>Avenida Andrômeda, 2000. Bloco 6 e 8 Alphaville SP</address>
-          <address>R. Ifigenia Maria de Oliveira, 3793 Jr. Piratininga Franca SP</address>
+          <address>Avenida Andrômeda, 2000. <br />Bloco 6 e 8 Alphaville SP</address>
+          <address>R. Ifigenia Maria de Oliveira, 3793 <br />Jr. Piratininga Franca SP</address>
         </div>
         <div className="footer--col flex col">
           <h5 className="footer__title">.Argentina</h5>
-          <address>Soler 5518, 3 Piso C1425BYF Palermo Hollywood CABA</address>
+          <address>Soler 5518, 3 Piso <br />C1425BYF <br />Palermo Hollywood <br />CABA</address>
         </div>
         <div className="footer--col flex col">
           <h5 className="footer__title">.México</h5>
-          <address>Blvd. Miguel de Cervantes Saavedra 169, Granada, Miguel Hidalgo, 11520 Ciudad de México, CDMX</address>
+          <address>Blvd. Miguel de Cervantes Saavedra 169, <br />Granada, Miguel Hidalgo, 11520 <br />Ciudad de México, CDMX</address>
         </div>
         <div className="footer--col flex col">
           <h5 className="footer__title">.Chile</h5>
-          <address>Roberto del Río 1137, Providencia.</address>
+          <address>Roberto del Río 1137, <br />Providencia.</address>
         </div>
       </div>
     </footer>

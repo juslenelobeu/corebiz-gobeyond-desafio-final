@@ -40,12 +40,10 @@ export const Main = () => {
     <main className="main__content flex align-center justify-between">
       <div className="content__description">
         <h1 className="content__title">{content[index].title}</h1>
-        <a className="content__link flex justify-center" href="https://www.corebiz.ag/" title="Link para o site da Corebiz" target="_blank" rel="noopener noreferrer">Ver mais <img src={iconArrow} alt="" /></a>
-        <div className="description__thumbnails flex">
+        <a className="content__link flex justify-center" href="https://www.corebiz.ag/" title="Link para o site da Corebiz" target="_blank" rel="noopener noreferrer">ver mais <img src={iconArrow} alt="" /></a>
+        <div className="description__thumbnails align-center">
           {content.map((item: ContentProps, index: number) => (
-            <button className={`thumbnail__button ${index === thumbnail ? 'active' : ''}`} onClick={() => { setIndex(index); setThumbnail(index) }} key={index}>
-              <img className="image__small" src={replaceUrl(item.thumbnailUrl, '240x144')} width={240} alt={item.title} />
-            </button>
+            <img className={`image__small ${index === thumbnail ? 'active' : ''}`} src={replaceUrl(item.thumbnailUrl, '150x100')} alt={item.title} onClick={() => { setIndex(index); setThumbnail(index) }} key={index} />
           ))}
         </div>
       </div>

@@ -11,11 +11,10 @@
     .menu-top--link {
       color: $color-white;
       font-size: 1.5625rem;
-      line-height: 4rem;
-      border-bottom: .2rem solid transparent;
+      line-height: 5.7rem;
+      border-bottom: .5rem solid transparent;
       
       &:hover {
-        opacity: .8;
         border-color: $color-white;
       }
     }
