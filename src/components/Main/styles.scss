@@ -6,19 +6,47 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 3.3rem;
 
   .content__description {
-    width: 27%;
+    width: 30%;
     
       .content__title {
         font-size: 3.75rem;
       }
 
-      .content__link {}
+      .content__link {
+        width: 221px;
+        display: flex;
+        justify-content: center;
+        gap: .5rem;
+        background-color: $color-white;
+        padding: 1rem;
+        margin: 2rem 0;
+        border-radius: 3.125rem;
+        color: $color-black;
+        font-size: 1.2rem;
+        text-align: center;
+      }
 
       .description__thumbs {
+        display: flex;
+        gap: .8rem;
+
         .thumb__button {
-          .image__small {}
+          max-width: 150px;
+          border: none;
+          border-radius:.2rem;
+          
+          &.active {
+            border: .2rem solid $color-white;
+          }
+          
+          .image__small {
+            width: 100%;
+            height: 100%;
+            border-radius:.2rem;
+          }
         }
       }
   }
@@ -29,6 +57,7 @@
 
     .image__large {
       width: 100%;
+      border-radius: 1rem;
     }
   }
 }

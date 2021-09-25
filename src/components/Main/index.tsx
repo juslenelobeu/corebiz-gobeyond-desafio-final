@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useState, useEffect } from 'react'
 import './styles.scss'
+import iconArrow from '../../assets/icons/icon-arrow.svg'
 
 interface ContentProps {
   id: number
@@ -38,10 +39,10 @@ export const Main = () => {
     <main className="main__content">
       <div className="content__description">
         <h1 className="content__title">{content[index].title}</h1>
-        <a className="content__link" href="https://www.corebiz.ag/" title="Link para o site da Corebiz" target="_blank" rel="noopener noreferrer">Ver mais</a>
+        <a className="content__link" href="https://www.corebiz.ag/" title="Link para o site da Corebiz" target="_blank" rel="noopener noreferrer">Ver mais <img src={iconArrow} alt="" /></a>
         <div className="description__thumbs">
           {content.map((item: ContentProps, index: number) => (
-            <button className="thumb__button" onClick={() => setIndex(index)} key={index}>
+            <button className="thumb__button active" onClick={() => setIndex(index)} key={index}>
               <img className="image__small" src={replaceUrl(item.thumbnailUrl, '240x144')} width={240} alt={item.title} />
             </button>
           ))}
