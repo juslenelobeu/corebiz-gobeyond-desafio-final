@@ -1,8 +1,9 @@
 @import '../../styles/colors';
 
 .header {
-  padding: 2rem;
-  border: thin solid red;
+  width: 90%;
+  margin: 0 auto;
+  padding: 2rem 0;
 
   display: flex;
   justify-content: space-between;

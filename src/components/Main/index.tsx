@@ -38,17 +38,17 @@ export const Main = () => {
     <main className="main__content">
       <div className="content__description">
         <h1 className="content__title">{content[index].title}</h1>
-        <a className="content__link" href={content[index].url} title={content[index].title} target="_blank" rel="noopener noreferrer">Ver mais</a>
+        <a className="content__link" href="https://www.corebiz.ag/" title="Link para o site da Corebiz" target="_blank" rel="noopener noreferrer">Ver mais</a>
         <div className="description__thumbs">
           {content.map((item: ContentProps, index: number) => (
             <button className="thumb__button" onClick={() => setIndex(index)} key={index}>
-              <img className="image__small" src={replaceUrl(item.thumbnailUrl, '120x72')} alt={item.title} />
+              <img className="image__small" src={replaceUrl(item.thumbnailUrl, '240x144')} width={240} alt={item.title} />
             </button>
           ))}
         </div>
       </div>
       <div className="content__image">
-        <img className="image__large" src={replaceUrl(content[index].url, '1130x670')} alt="" />
+        <img className="image__large" src={replaceUrl(content[index].url, '1130x670')} width={1130} alt={content[index].title} />
       </div>
     </main>
   )

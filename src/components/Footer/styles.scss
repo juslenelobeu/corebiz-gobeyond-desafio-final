@@ -1,5 +1,72 @@
 @import '../../styles/colors';
 
 .footer {
-  border: thin solid blue;
+  background-color: $color-white;
+  display: flex;
+  color: $color-black;
+  font-size: .75rem;
+
+  .footer__left {
+    width: 35%;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 3rem 3.3rem;
+
+    .footer--col {
+      justify-content: space-between;
+
+      .footer__logo {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+      }
+
+      .footer__nav-social {
+        display: flex;
+        gap: .8rem;
+
+        .nav__item {
+          img { vertical-align: bottom; }
+        }
+      }
+    }
+
+    .footer__nav-links {
+      display: flex;
+      flex-direction: column;
+
+      .nav__link {
+        border-bottom: thin solid;
+        line-height: 2.2rem;
+        width: 185px;
+        color: $color-black;
+      }
+    }
+  }
+  
+  .footer__right {
+    width: 65%;
+    background-color: $color-black-96;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 3rem 3.3rem;
+  }
+
+  .footer--col {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer__title {
+    font-size: 1.25rem;
+  }
+
+  address {
+    max-width: 244px;
+    font-size: .75rem;
+    margin-top: 1rem;
+  }
+
 }
