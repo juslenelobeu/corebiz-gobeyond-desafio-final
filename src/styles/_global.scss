@@ -7,24 +7,20 @@ body {
   color: $color-white;
 }
 a { text-decoration: none; }
-.container {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-}
+
+.flex { display: flex; }
+.row { flex-direction: row; }
+.col { flex-direction: column; }
+.align-center { align-items: center; }
+.justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
 
 @media (max-width: 1024px) {
-  .container {
-    height: auto;
-  }
+
 }
 @media (max-height: 830px) {
-  .container {
-    gap: 2rem;
-  }
+
 }
 @media (max-height: 780px) {
-  .container {
-    height: auto;
-  }
+
 }

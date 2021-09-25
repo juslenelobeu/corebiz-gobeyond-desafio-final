@@ -3,9 +3,6 @@
 .main__content {
   width: 90%;
   margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   margin-bottom: 3.3rem;
 
   .content__description {
@@ -18,8 +15,6 @@
 
       .content__link {
         width: 221px;
-        display: flex;
-        justify-content: center;
         gap: .5rem;
         background-color: $color-white;
         padding: 1rem;
@@ -31,7 +26,6 @@
       }
 
       .description__thumbnails {
-        display: flex;
         gap: .8rem;
 
         .thumbnail__button {
