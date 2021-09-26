@@ -2,24 +2,35 @@
 
 .footer {
   background-color: $color-white;
+  width: 100vw;
+  height: 20vh;
+  display: flex;
   color: $color-black;
   font-size: .75rem;
-  display: flex;
+  font-weight: 500;
 
   .footer__left {
     width: 33%;
     gap: 5rem;
-    padding: 3rem 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    .footer--col {
-      .footer__logo {
-        gap: .5rem;
+    .footer__copyright {
+      display: flex;
+      flex-direction: column;
+      
+      .footer__copyright-text {
+        margin-top: .5rem;
+        font-weight: 600;
       }
-
+      
       .footer__nav-social {
+        display: flex;
+        align-items: baseline;
         gap: .8rem;
         margin-top: 2.5rem;
-
+        
         .nav__item {
           &:hover {
             transform: scale(1.1);
@@ -27,13 +38,16 @@
         }
       }
     }
-
+    
     .footer__nav-links {
+      display: flex;
+      flex-direction: column;
 
       .nav__link {
+        font-size: .7rem;
         border-bottom: thin solid;
-        line-height: 2.2rem;
-        width: 185px;
+        line-height: 2rem;
+        width: 150px;
         color: $color-black;
         transition: padding-left .5s ease;
 
@@ -45,8 +59,9 @@
   }
   
   .footer__right {
-    width: 67%;
     background-color: $color-black-96;
+    width: 67%;
+    display: flex;
     gap: 5rem;
     padding: 3rem 0;
     padding-left: 10.5rem;
@@ -61,33 +76,150 @@
     margin-top: 1rem;
     font-style: normal;
   }
+  
+}
 
   @media (max-width: 1280px) {
-    .footer__left {
-      gap: 2rem;
-      padding: 3rem 4rem;
+    .footer {
+      font-size: .65rem;
+      .footer__left {
+        gap: 2rem;
+  
+        .footer--col {
+          justify-content: space-between;
+          .footer__nav-social {
+            margin-top: 3rem;
+          }
+        }
+  
+        .footer__nav-links {
+          .nav__link {
+            width: 130px;
+          }
+        }
+      }
+      .footer__right {
+        padding: 0;
+        padding-top: 1.5rem;
+        justify-content: center;
+        gap: 2rem;
 
-      .footer__nav-links {
-        .nav__link {
-          width: 130px;
+        address {
+          font-size: .65rem;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 577px) and (max-width: 768px) {
+    .footer {
+      height: 35vh;
+      flex-direction: column;
+      
+      .footer__left {
+        width: 100%;
+        padding: 1rem 2rem;
+        justify-content: space-between;
+
+        .footer__copyright {
+          .footer__nav-social {
+            margin-top: 1rem;
+          }
+        }
+
+        .footer__nav-social {
+          margin-top: 1rem;
+        }
+        .footer__nav-links {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          gap: 1rem;
+
+          .nav__link {
+            width: 100px;
+          }
+        }
+      }
+      .footer__right {
+        width: 100%;
+        padding-left: 0;
+        padding: 2rem;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  @media (max-width: 576px) {
+    .footer {
+      width: 100vw;
+      height: auto;
+      flex-direction: column;
+      align-items: center;
+
+      .footer__left {
+        width: 98%;
+        padding: 1rem;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 2rem;
+
+        .footer__copyright {
+          align-items: center;
+          .footer__nav-social {
+            margin-top: 1rem;
+          }
+        }
+
+        .footer__nav-links {
+          width: 100%;
+          .nav__link {
+            width: 100%;
+
+          }
+        }
+      }
+
+      .footer__right {
+        width: 100%;
+        justify-content: space-around;
+        gap: .5rem;
+        padding: 1rem .5rem;
+
+        .footer--col {
+          width: 20%;
+          address {
+            br {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+@media (max-width: 425px) {
+  .footer {
+    .footer__left {
+      .footer__copyright {
+        .footer__nav-social {
+          margin-top: 1.5rem;
         }
       }
     }
     .footer__right {
-      padding-left: 2.5rem;
-      gap: 2rem;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .footer {
       flex-direction: column;
-      .footer__left {
+      padding: 2rem;
+      gap: 2rem;
+      .footer--col {
         width: 100%;
-        padding: 0;
-        background: red
+        address {
+          font-size: .7rem;
+          br {
+            display: none;
+          }
+        }
       }
     }
   }
-
 }

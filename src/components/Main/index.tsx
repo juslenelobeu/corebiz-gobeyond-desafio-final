@@ -20,7 +20,7 @@ export const Main = () => {
   const [index, setIndex] = useState(0)
   const [thumbnail, setThumbnail] = useState(0)
 
-  const replaceUrl = (url: string, size: string) => {
+  const addSizeOnUrlImage = (url: string, size: string) => {
     let splitUrl = url.split('/')
     splitUrl[3] = size
     return splitUrl.join('/')
@@ -37,18 +37,20 @@ export const Main = () => {
   }, [])
 
   return (
-    <main className="main__content flex align-center justify-between">
+    <main className="main__content">
       <div className="content__description">
-        <h1 className="content__title">{content[index].title}</h1>
-        <a className="content__link flex justify-center" href="https://www.corebiz.ag/" title="Link para o site da Corebiz" target="_blank" rel="noopener noreferrer">ver mais <img src={iconArrow} alt="" /></a>
-        <div className="description__thumbnails align-center">
+        <div className="description__highlight">
+          <h1 className="content__title">{content[index].title}</h1>
+          <a className="content__link" href="https://www.corebiz.ag/" title="Link para o site da Corebiz" target="_blank" rel="noopener noreferrer">ver mais <img src={iconArrow} alt="" /></a>
+        </div>
+        <div className="description__thumbnails">
           {content.map((item: ContentProps, index: number) => (
-            <img className={`image__small ${index === thumbnail ? 'active' : ''}`} src={replaceUrl(item.thumbnailUrl, '150x100')} alt={item.title} onClick={() => { setIndex(index); setThumbnail(index) }} key={index} />
+            <img className={`image__small ${index === thumbnail ? 'active' : ''}`} src={addSizeOnUrlImage(item.thumbnailUrl, '123x74')} alt={item.title} onClick={() => { setIndex(index); setThumbnail(index) }} key={index} width={123} />
           ))}
         </div>
       </div>
       <div className="content__image">
-        <img className="image__large" src={replaceUrl(content[index].url, '1130x670')} width={1130} alt={content[index].title} />
+        <img className="image__large" src={addSizeOnUrlImage(content[index].url, '1130x670')} width={1130} alt={content[index].title} />
       </div>
     </main>
   )

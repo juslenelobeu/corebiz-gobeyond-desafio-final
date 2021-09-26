@@ -1,21 +1,126 @@
 @import '../../styles/colors';
 
 .header {
-  width: 90%;
-  height: 100px;
+  width: 92vw;
+  height: 13vh;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
   .header__menu-top {
-    gap: 1rem;
+    display: flex;
+    gap: 2.8rem;
 
     .menu-top--link {
       color: $color-white;
-      font-size: 1.5625rem;
-      line-height: 5.7rem;
-      border-bottom: .5rem solid transparent;
+      font-size: 1.5rem;
+      line-height: 8.1rem;
+      border-bottom: .65rem solid transparent;
       
       &:hover {
         border-color: $color-white;
+      }
+    }
+    
+  }
+  
+}
+@media (max-width: 768px) {
+  .header {
+    height: 15vh;
+    .header__logo {
+      width: 150px;
+    }
+    .header__menu-top {
+      .menu-top--link {
+        font-size: 1.2rem;
+        line-height: 3rem;
+        border-bottom: .2rem solid transparent;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .header {
+    .header__menu-top {
+      gap: 1rem;
+      .menu-top--link {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .header {
+    width: 85%;
+    height: 10vh;
+    .header__logo {
+      width: 130px;
+    }
+
+    .header__menu-top {
+      .header__button-toggle { 
+        display: flex; 
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 0;
+        order: 1;
+        width: 2rem;
+        height: 1.7rem;
+        padding: .2rem;
+        background-color: transparent;
+        border: none;
+
+        hr {
+          width: 100%;
+          border: none;
+          border-bottom: .2rem solid;
+          border-color: $color-white;
+        }
+      }
+      .header__menu-content {
+        &.header__button-toggle--close {
+          background-color: red;
+          padding: 1rem;
+          width: 50px;
+          height: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+          z-index: 99;
+          top: 1rem;
+          right: 1rem;
+        }
+        &.header__button-toggle--close hr {
+          transform: rotate(0) translate(0, 0);
+          transition: all 0.2s ease-in-out;
+        }
+        &.header__button-toggle--close hr.one {
+          transform: rotate(45deg) translateX(3px);
+        }
+        &.header__button-toggle--close hr.two {
+          transform: rotate(-45deg) translateX(2px);
+        }
+      }
+    }
+
+    .header__menu-content {
+      display: none;
+      &.visible {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        background-color: $color-black;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
       }
     }
   }
