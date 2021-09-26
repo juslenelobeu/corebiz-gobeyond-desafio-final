@@ -13,9 +13,9 @@ interface ContentProps {
 export const Main = () => {
   const [content, setContent] = useState([{
     id: 0,
-    title: '',
-    url: '',
-    thumbnailUrl: ''
+    title: 'accusamus beatae ad facilis cum similique qui sunt',
+    url: 'https://via.placeholder.com/1130x670/92c952',
+    thumbnailUrl: 'https://via.placeholder.com/123x74/92c952'
   }])
   const [index, setIndex] = useState(0)
   const [thumbnail, setThumbnail] = useState(0)
