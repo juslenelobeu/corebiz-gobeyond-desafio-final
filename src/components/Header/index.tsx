@@ -15,23 +15,31 @@ export const Header = () => {
     <header className="header">
       <img className="header__logo" src={logo} alt="Logo Corebiz" width={216} height={50} />
       <nav className="header__menu-top">
-        <button className="header__button-toggle" onClick={handleToggle} area-label="Toggle" >
+        {/* <button className="header__button-toggle" name="toggle" type="button" onClick={handleToggle} area-label="Toggle" >
           <span className="hidden" aria-hidden="true">read only</span>
           <span className="bar">
             <hr />
             <hr />
             <hr />
           </span>
-        </button>
-
+        </button> */}
+        <span className="menu__toggle" onClick={handleToggle}>
+          <hr />
+          <hr />
+          <hr />
+        </span>
         <div className={`header__menu-content ${toggle}`}>
-          <button className="header__button-toggle--close" name="toggle-close" type="button" aria-pressed="false" onClick={handleToggleClose} area-label="Toggle Close">
+          <span className="menu__toggle menu__toggle-close" onClick={handleToggleClose}>
+            <hr />
+            <hr />
+          </span>
+          {/* <button className="header__button-toggle--close" name="toggle-close" type="button" aria-pressed="false" onClick={handleToggleClose} area-label="Toggle Close">
             <span className="hidden" aria-hidden="true">read only</span>
             <span className="bar">
               <hr />
               <hr />
             </span>
-          </button>
+          </button> */}
           <a className="menu-top--link" href="https://www.corebiz.ag/pt/about/" target="_blank" rel="noreferrer" title="A Corebiz">a corebiz</a>
           <a className="menu-top--link" href="https://www.corebiz.ag/pt/#framework-title" target="_blank" rel="noreferrer" title="Serviços">serviços</a>
           <a className="menu-top--link" href="https://www.corebiz.ag/pt/cases/" target="_blank" rel="noreferrer" title="Cases">cases</a>
