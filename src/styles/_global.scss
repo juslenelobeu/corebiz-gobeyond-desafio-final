@@ -7,20 +7,3 @@ body {
   color: $color-white;
 }
 a { text-decoration: none; }
-
-.flex { display: flex; }
-.row { flex-direction: row; }
-.col { flex-direction: column; }
-.align-center { align-items: center; }
-.justify-center { justify-content: center; }
-.justify-between { justify-content: space-between; }
-
-@media (max-width: 1024px) {
-
-}
-@media (max-height: 830px) {
-
-}
-@media (max-height: 780px) {
-
-}

@@ -60,22 +60,29 @@
 
       .header__button-toggle { 
         display: flex; 
-        flex-direction: column;
-        justify-content: space-between;
-        gap: 0;
-        order: 1;
-        width: 2rem;
-        height: 1.7rem;
-        padding: .2rem;
         background-color: transparent;
         border: none;
-      
-        hr {
-          width: 100%;
-          border: none;
-          border-bottom: .2rem solid;
-          border-color: $color-white;
+
+        .hidden {
+          display: none;
         }
+
+        .bar {
+          display: flex; 
+          flex-direction: column;
+          justify-content: space-between;
+          width: 2rem;
+          height: 1.7rem;
+          padding: .2rem;
+          
+          hr {
+            width: 100%;
+            border: none;
+            border-bottom: .2rem solid;
+            border-color: $color-white;
+          }
+        }
+      
       }
       
       .header__menu-content {
@@ -96,12 +103,7 @@
         }
         
         .header__button-toggle--close {
-          width: 2rem;
-          height: 2rem;
           display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
           position: absolute;
           z-index: 99;
           top: 2rem;
@@ -109,17 +111,30 @@
           border: none;
           background-color: transparent;
           
-          &.header__button-toggle--close hr {
-            width: 100%;
-            border: thin solid $color-white;
-            transform: rotate(0) translate(0, 0);
-            transition: all 0.2s ease-in-out;
+          .hidden {
+            display: none;
           }
-          &.header__button-toggle--close hr:first-child {
-            transform: rotate(45deg) translateX(2px);
-          }
-          &.header__button-toggle--close hr:last-child {
-            transform: rotate(-45deg) translateX(2px);
+
+          .bar {
+            width: 2rem;
+            height: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            
+            hr {
+              width: 100%;
+              border: thin solid $color-white;
+              transform: rotate(0) translate(0, 0);
+              transition: all 0.2s ease-in-out;
+            }
+            hr:first-child {
+              transform: rotate(45deg) translateX(2px);
+            }
+            hr:last-child {
+              transform: rotate(-45deg) translateX(2px);
+            }
           }
         }
         

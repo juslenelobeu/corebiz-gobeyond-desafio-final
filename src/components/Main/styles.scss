@@ -36,6 +36,10 @@
         font-size: 1.2rem;
         text-align: center;
         transition: gap .5s ease;
+
+        .hidden {
+          display: none;
+        }
   
         &:hover {
           gap: 2rem
