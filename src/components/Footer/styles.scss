@@ -172,6 +172,11 @@
           align-items: center;
           .footer__nav-social {
             margin-top: 1rem;
+
+            .nav__item {
+              width: 48px;
+              height: 48px;
+            }
           }
         }
         
