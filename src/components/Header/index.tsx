@@ -15,13 +15,13 @@ export const Header = () => {
     <header className="header">
       <img className="header__logo" src={logo} alt="Logo Corebiz" width={216} height={50} />
       <nav className="header__menu-top">
-        <button className="header__button-toggle" onClick={handleToggle}>
+        <button className="header__button-toggle" type="button" onClick={handleToggle}>
           <hr />
           <hr />
           <hr />
         </button>
         <div className={`header__menu-content ${toggle}`}>
-          <button className="header__button-toggle--close" onClick={handleToggleClose}>
+          <button className="header__button-toggle--close" type="button" aria-pressed="false" onClick={handleToggleClose}>
             <hr className="one" />
             <hr className="two" />
           </button>
