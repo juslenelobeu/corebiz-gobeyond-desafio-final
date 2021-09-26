@@ -41,7 +41,7 @@ export const Main = () => {
       <div className="content__description">
         <div className="description__highlight">
           <h1 className="content__title">{content[index].title}
-            <a className="content__link" href="https://www.corebiz.ag/" title="Link veja mais para o site da Corebiz">veja mais <span className="hidden">sobre a Corebiz</span><img src={iconArrow} alt="" /></a>
+            <a className="content__link" href="https://www.corebiz.ag/" title="Link veja mais para o site da Corebiz">veja mais <span className="hidden">sobre a Corebiz</span><img src={iconArrow} alt="Ícone de seta para direita" width={20} height={20} /></a>
           </h1>
         </div>
         <div className="description__thumbnails">

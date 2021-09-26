@@ -11,7 +11,7 @@ export const Footer = () => {
     <footer className="footer">
       <div className="footer__left">
         <div className="footer__copyright">
-          <img className="footer__logo" src={logoCorebizFooter} alt="Logo Corebiz" width="140" />
+          <img className="footer__logo" src={logoCorebizFooter} alt="Logo Corebiz" width={140} height={30} />
           <span className="footer__copyright-text">direitos reservados, corebiz 2021</span>
           <nav className="footer__nav-social">
             <a className="nav__item" href="https://pt-br.facebook.com/corebiz.ag/" target="_blank" rel="noreferrer"><img src={iconFacebook} alt="Ícone do Facebook" width={16} height={16} /></a>
