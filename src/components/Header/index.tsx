@@ -13,15 +13,15 @@ export const Header = () => {
 
   return (
     <header className="header">
-      <img className="header__logo" src={logo} alt="Logo Corebiz" width={216} />
+      <img className="header__logo" src={logo} alt="Logo Corebiz" width={216} height={50} />
       <nav className="header__menu-top">
         <button className="header__button-toggle" onClick={handleToggle}>
           <hr />
           <hr />
+          <hr />
         </button>
         <div className={`header__menu-content ${toggle}`}>
-          <button className="header__button-toggle .header__button-toggle--close" onClick={handleToggleClose}>
-            close
+          <button className="header__button-toggle--close" onClick={handleToggleClose}>
             <hr className="one" />
             <hr className="two" />
           </button>

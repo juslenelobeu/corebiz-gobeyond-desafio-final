@@ -2,52 +2,58 @@
 
 .main__content {
   width: 92vw;
-  height: 67vh;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  gap: 2rem;
 
   .content__description {
-    width: 32%;
+    width: 30%;
     position: relative;
-    
-    .content__title {
-      font-weight: 600;
-      font-size: 3.75rem;
-      line-height: 4rem;
-      margin-top: 5rem;
-    }
 
-    .content__link {
-      width: 14rem;
-      gap: .5rem;
-      background-color: $color-white;
-      padding: 1rem;
-      margin-top: 2.5rem;
+    .description__highlight {
+      height: 545px;
       display: flex;
-      align-items: center;
+      flex-direction: column;
       justify-content: center;
-      border-radius: 3.125rem;
-      color: $color-black;
-      font-size: 1.2rem;
-      text-align: center;
-      transition: gap .5s ease;
 
-      &:hover {
-        gap: 1rem
+      .content__title {
+        font-weight: 600;
+        font-size: 3.75rem;
+        line-height: 4rem;
+        // margin-top: 5rem;
+      }
+  
+      .content__link {
+        width: 14rem;
+        gap: .8rem;
+        background-color: $color-white;
+        padding: 1rem;
+        margin-top: 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 3.125rem;
+        color: $color-black;
+        font-size: 1.2rem;
+        text-align: center;
+        transition: gap .5s ease;
+  
+        &:hover {
+          gap: 2rem
+        }
       }
     }
+    
 
     .description__thumbnails {
       gap: .9rem;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       align-items: center;
-      position: absolute;
-      bottom: 6.5rem;
       
       .image__small {
-        width: 123px;
+        width: 100%;
         border-radius: .2rem;
         transition: all .5s ease;
         
@@ -72,7 +78,9 @@
 @media (max-width: 1280px) {
   .main__content {
     .content__description {
+      width: 35%;
       .description__highlight {
+        height: 330px;
         .content__title {
           font-size: 2.3rem;
           line-height: 2.5rem;
@@ -85,12 +93,6 @@
           font-size: 1.1rem;
         }
       }
-      .description__thumbnails {
-        bottom: 8rem;
-        .image__small {
-          width: 100px;
-        }
-      }
     }
     .content__image {
       width: 60%;
@@ -100,9 +102,12 @@
 
 @media (max-width: 768px) {
   .main__content {
-    height: 50vh;
     .content__description {
+      width: 40%;
+
       .description__highlight {
+        height: 250px;
+
         .content__title {
           font-size: 2rem;
           line-height: 2.2rem;
@@ -113,15 +118,13 @@
           width: 80%;
           padding: .6rem;
           font-size: 1rem;
-          margin-top: 2rem;
         }
       }
       .description__thumbnails {
-        width: 100vw;
-        bottom: 2rem;
-        .image__small {
-          width: 123px;
-        }
+        margin-top: 2rem;
+        width: 92vw;
+        display: flex;
+        margin-top: 2rem;
       }
     }
     .content__image {
@@ -143,19 +146,17 @@
 
       .description__highlight {
         display: flex;
-        align-items: center;
         justify-content: space-between;
+        height: 180px;
 
         .content__title {
-          font-size: 1.2rem;
-          line-height: 1.7rem;
           margin-top: 0;
-          width: 60%;
+          width: 100%;
         }
     
         .content__link {
-          width: 30%;
-          padding: .5rem;
+          width: 40%;
+          padding: 1rem;
           font-size: 1rem;
           margin-top: 0;
         }
@@ -171,7 +172,6 @@
     }
     .content__image {
       width: 100%;
-      margin-top: 2rem;
     }
   }
 }
@@ -180,11 +180,13 @@
   .main__content {
     width: 85vw;
     padding-bottom: 5.5rem;
+
     .content__description {
       .description__highlight {
         flex-direction: column;
         align-items: flex-start;
         margin-top: 2rem;
+        height: 260px;
 
         .content__title {
           font-size: 2.3rem;

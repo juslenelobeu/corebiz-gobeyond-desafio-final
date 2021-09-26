@@ -41,7 +41,7 @@ export const Main = () => {
       <div className="content__description">
         <div className="description__highlight">
           <h1 className="content__title">{content[index].title}</h1>
-          <a className="content__link" href="https://www.corebiz.ag/" title="Link para o site da Corebiz" target="_blank" rel="noopener noreferrer">ver mais <img src={iconArrow} alt="" /></a>
+          <a className="content__link" href="https://www.corebiz.ag/" title="Link para o site da Corebiz" target="_blank" rel="noopener noreferrer">veja mais <img src={iconArrow} alt="" /></a>
         </div>
         <div className="description__thumbnails">
           {content.map((item: ContentProps, index: number) => (
