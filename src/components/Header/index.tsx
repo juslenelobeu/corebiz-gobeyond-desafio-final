@@ -15,7 +15,7 @@ export const Header = () => {
     <header className="header">
       <img className="header__logo" src={logo} alt="Logo Corebiz" width={216} height={50} />
       <nav className="header__menu-top">
-        <button className="header__button-toggle" type="button" onClick={handleToggle} area-label="Toggle" >
+        <button className="header__button-toggle" name="toggle" type="button" onClick={handleToggle} area-label="Toggle" >
           <span className="hidden" aria-hidden="true">read only</span>
           <span className="bar">
             <hr />
@@ -24,7 +24,7 @@ export const Header = () => {
           </span>
         </button>
         <div className={`header__menu-content ${toggle}`}>
-          <button className="header__button-toggle--close" type="button" aria-pressed="false" onClick={handleToggleClose} area-label="Toggle Close">
+          <button className="header__button-toggle--close" name="toggle-close" type="button" aria-pressed="false" onClick={handleToggleClose} area-label="Toggle Close">
             <span className="hidden" aria-hidden="true">read only</span>
             <span className="bar">
               <hr />
