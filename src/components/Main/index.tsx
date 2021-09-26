@@ -27,7 +27,7 @@ export const Main = () => {
   }
 
   const getUrl = async () => {
-    await axios.get('https://jsonplaceholder.typicode.com/photos?_start=0&_limit=4')
+    await axios.get('https://jsonplaceholder.typicode.com/photos?_start=0&_limit=4&cache-control=no-cache')
       .then((result) => {
         setContent(result.data)
       })
