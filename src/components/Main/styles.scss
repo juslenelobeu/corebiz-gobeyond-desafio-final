@@ -56,6 +56,7 @@
       
       .image__small {
         width: 100%;
+        height: auto;
         border-radius: .2rem;
         transition: all .5s ease;
         
@@ -72,6 +73,7 @@
     
     .image__large {
       width: 100%;
+      height: auto;
       border-radius: 1rem;
     }
   }

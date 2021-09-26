@@ -46,12 +46,12 @@ export const Main = () => {
         </div>
         <div className="description__thumbnails">
           {content.map((item: ContentProps, index: number) => (
-            <img className={`image__small ${index === thumbnail ? 'active' : ''}`} src={addSizeOnUrlImage(item.thumbnailUrl, '123x74')} alt={item.title} onClick={() => { setIndex(index); setThumbnail(index) }} key={index} width={123} />
+            <img className={`image__small ${index === thumbnail ? 'active' : ''}`} src={addSizeOnUrlImage(item.thumbnailUrl, '123x74')} alt={item.title} onClick={() => { setIndex(index); setThumbnail(index) }} key={index} width={123} height={74} />
           ))}
         </div>
       </div>
       <div className="content__image">
-        <img className="image__large" src={addSizeOnUrlImage(content[index].url, '1130x670')} width={1130} alt={content[index].title} />
+        <img className="image__large" src={addSizeOnUrlImage(content[index].url, '1130x670')} width={1130} height={670} alt={content[index].title} />
       </div>
     </main>
   )
