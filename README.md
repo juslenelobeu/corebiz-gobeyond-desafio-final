@@ -1,12 +1,14 @@
-# README
+<p align="center">
+ <img src="https://github.com/juslenelobeu/corebiz-gobeyond-desafio-02/raw/master/assets/images/logo-gobeyond.png" width="400" alt="Project logo">
+</p>
 
-### **Desafio Final - Go Beyond | Corebiz**
+<h3 align="center">Desafio 03 - Go Beyond | Corebiz</h3>
 
 ---
 
 ## 👀 Preview
 
-![Screenshot desktop](./screenshot-desktop.png)
+[![Screenshot desktop](./screenshot-desktop.png)](https://corebiz-gobeyond-desafio-final.vercel.app/) 
 
 ### 📊 Lighthouse
 
@@ -23,7 +25,7 @@
 - [Deployment](#deployment)
 - [Authors](#authors)
 
-## 🧐 About
+## 🧐 About   <a name = "about"></a>
 
 Crie uma home page responsiva usando React.
 
@@ -38,7 +40,7 @@ Crie uma home page responsiva usando React.
 
 Link para pegar as imagens dinâmicas, use essa `https://jsonplaceholder.typicode.com`
 
-## 👩🏻‍💻 How was it done
+## 👩🏻‍💻 How was it done  <a name = "how"></a>
 
 ### 🔷 Componentes  <a name = "components"></a>
 
