@@ -2,7 +2,7 @@
  <img src="https://github.com/juslenelobeu/corebiz-gobeyond-desafio-02/raw/master/assets/images/logo-gobeyond.png" width="400" alt="Project logo">
 </p>
 
-<h3 align="center">Desafio 03 - Go Beyond | Corebiz</h3>
+<h3 align="center">Desafio Final - Go Beyond | Corebiz</h3>
 
 ---
 
