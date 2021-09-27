@@ -26,14 +26,25 @@ export const Main = () => {
     return splitUrl.join('/')
   }
 
-  const getUrl = async () => {
-    await axios.get('https://jsonplaceholder.typicode.com/photos?_start=0&_limit=4&cache-control=no-cache')
-      .then((result) => {
-        setContent(result.data)
+  const getContentAPI = async () => {
+    try {
+      const response = await axios.get('https://jsonplaceholder.typicode.com/photos', {
+        params: {
+          _start: 0,
+          _limit: 4,
+        },
+        headers: { 'Cache-Control': 'no-cache' }
       })
+      console.log(response)
+      setContent(response.data);
+    } catch (error) {
+      console.log(error);
+    }
   }
+
   useEffect(() => {
-    getUrl()
+    getContentAPI()
+
   }, [])
 
   return (

@@ -13,12 +13,6 @@
     .menu__toggle {
       display: none;
     }
-    .header__button-toggle {
-      display: none;
-    }
-    .header__button-toggle--close {
-      display: none;
-    }
     
     .header__menu-content {
       display: flex;
@@ -76,7 +70,7 @@
           position: absolute;
           z-index: 1;
           top: 2rem;
-          right: 2rem;
+          right: 2rem;  
 
           hr {
             transform: rotate(0) translate(0, 0);
@@ -89,33 +83,6 @@
             transform: rotate(-45deg) translateX(.45rem);
           }
         }
-      }
-
-      .header__button-toggle { 
-        display: flex; 
-        background-color: transparent;
-        border: none;
-
-        .hidden {
-          display: none;
-        }
-
-        .bar {
-          display: flex; 
-          flex-direction: column;
-          justify-content: space-between;
-          width: 2rem;
-          height: 1.7rem;
-          padding: .2rem;
-          
-          hr {
-            width: 100%;
-            border: none;
-            border-bottom: .2rem solid;
-            border-color: $color-white;
-          }
-        }
-      
       }
       
       .header__menu-content {
@@ -133,42 +100,6 @@
           top: 0;
           left: 0;
           z-index: 2;
-        }
-        
-        .header__button-toggle--close {
-          display: flex;
-          position: absolute;
-          z-index: 99;
-          top: 2rem;
-          right: 2rem;
-          border: none;
-          background-color: transparent;
-          
-          .hidden {
-            display: none;
-          }
-
-          .bar {
-            width: 2rem;
-            height: 2rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            
-            hr {
-              width: 100%;
-              border: thin solid $color-white;
-              transform: rotate(0) translate(0, 0);
-              transition: all 0.2s ease-in-out;
-            }
-            hr:first-child {
-              transform: rotate(45deg) translateX(2px);
-            }
-            hr:last-child {
-              transform: rotate(-45deg) translateX(2px);
-            }
-          }
         }
         
         .menu-top--link {
