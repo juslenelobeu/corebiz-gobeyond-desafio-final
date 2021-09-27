@@ -127,20 +127,11 @@ yarn add axios
 ```
 
 ```tsx
-const getContentAPI = async () => {
-    try {
-      const response = await axios.get('https://jsonplaceholder.typicode.com/photos', {
-        params: {
-          _start: 0,
-          _limit: 4,
-        },
-        headers: { 'Cache-Control': 'no-cache' }
-      })
-      console.log(response)
-      setContent(response.data);
-    } catch (error) {
-      console.log(error);
-    }
+const getContentApi = async () => {
+  await axios.get('https://jsonplaceholder.typicode.com/photos?_start=0&_limit=4')
+    .then((result) => {
+      setContent(result.data)
+    })
 }
 ```
 
@@ -150,7 +141,7 @@ Utilizei o `hook` `useEffect` para observar as atualizações dessa função
 
 ```tsx
 useEffect(() => {
-    getContentAPI()
+  getContentApi()
 }, [])
 ```
 
